@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light dark">
-  <link rel="icon" href="data:,">
+  <link rel="icon" type="image/webp" href="assets/marketlift-logo.webp">
   <title>MarketLift — Amazon, TikTok Shop & eBay Growth Agency</title>
   <meta name="description" content="MarketLift helps brands grow through focused Amazon, TikTok Shop and eBay marketplace management.">
   <meta name="keywords" content="Amazon management, TikTok Shop agency, eBay store management, marketplace growth, catalog management, marketplace ads">
@@ -84,7 +84,8 @@
 
     .site-nav{position:fixed;z-index:100;top:14px;left:0;right:0;pointer-events:none}
     .nav-shell{position:relative;z-index:103;width:min(1060px,calc(100% - 30px));margin:auto;min-height:64px;padding:8px 10px 8px 16px;display:flex;align-items:center;justify-content:center;gap:16px;border:1px solid var(--line);background:var(--nav);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:14px;box-shadow:0 10px 35px rgba(0,0,0,.09);pointer-events:auto}
-    .nav-brand{display:none;font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:-.025em;white-space:nowrap}
+    .nav-brand{display:inline-flex;align-items:center;gap:9px;margin-right:auto;font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:-.025em;white-space:nowrap}
+    .brand-logo{width:36px;height:36px;object-fit:cover;border-radius:7px;flex:0 0 36px}
     .nav-links{display:flex;align-items:center;justify-content:center;gap:4px;list-style:none;margin:0;padding:0}
     .nav-links a{display:block;padding:10px 12px;color:var(--muted);font-size:.86rem;font-weight:650;border-radius:7px}
     .nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--surface-2)}
@@ -227,7 +228,7 @@
     .contact-panel{background:var(--surface);border:1px solid var(--line);display:grid;grid-template-columns:.9fr 1.1fr;box-shadow:var(--shadow)}.contact-copy{padding:54px;border-right:1px solid var(--line)}.contact-copy h2{font-size:clamp(2.5rem,5vw,5rem)}.contact-copy>p{margin:22px 0 34px}.contact-email{display:inline-block;color:var(--accent);font-weight:700;border-bottom:1px solid currentColor;overflow-wrap:anywhere}.response-note{margin-top:32px;font-size:.78rem;color:var(--muted);display:flex;align-items:center;gap:8px}.response-dot{width:8px;height:8px;border-radius:50%;background:var(--success);box-shadow:0 0 0 4px color-mix(in srgb,var(--success) 16%,transparent)}
     .contact-form{padding:54px;display:grid;gap:18px}.field{display:grid;gap:7px}.field label{font-size:.77rem;font-weight:700}.field input,.field textarea{width:100%;border:1px solid var(--line);background:var(--bg);color:var(--text);padding:14px 15px;border-radius:7px;outline:none}.field input:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent)}.field textarea{min-height:130px;resize:vertical}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.form-status{font-size:.78rem;color:var(--muted);min-height:1.2em}
 
-    footer{padding:50px 0 28px;border-top:1px solid var(--line)}.footer-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}.footer-name{font-family:"Bricolage Grotesque";font-size:2rem;font-weight:700}.footer-tagline{font-size:.85rem;margin-top:6px}.footer-links{display:flex;gap:20px;flex-wrap:wrap;justify-content:flex-end}.footer-links a{font-size:.8rem;color:var(--muted)}.footer-links a:hover{color:var(--accent)}.footer-bottom{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:.74rem}
+    footer{padding:50px 0 28px;border-top:1px solid var(--line)}.footer-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}.footer-brand{display:flex;align-items:center;gap:13px}.footer-brand .brand-logo{width:44px;height:44px;flex-basis:44px}.footer-name{font-family:"Bricolage Grotesque";font-size:2rem;font-weight:700;line-height:1}.footer-tagline{font-size:.85rem;margin-top:6px}.footer-links{display:flex;gap:20px;flex-wrap:wrap;justify-content:flex-end}.footer-links a{font-size:.8rem;color:var(--muted)}.footer-links a:hover{color:var(--accent)}.footer-bottom{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:.74rem}
 
     .back-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow);display:none;place-items:center;cursor:pointer;z-index:50}.back-top.show{display:grid}.back-top:hover{background:var(--accent);color:#07100f}
     [data-reveal]{opacity:1;transform:translateY(16px);transition:transform .65s cubic-bezier(.22,1,.36,1)}[data-reveal].visible{transform:none}
@@ -239,11 +240,11 @@
       html{scroll-padding-top:92px}main section[id]{scroll-margin-top:92px}
       .site-nav{top:max(10px,env(safe-area-inset-top))}
       .nav-shell{width:calc(100% - 20px);min-height:58px;padding:6px 6px 6px 14px;justify-content:space-between;gap:10px;backdrop-filter:none;-webkit-backdrop-filter:none}
-      .nav-brand{display:block;min-width:0;overflow:hidden;text-overflow:ellipsis}
+      .nav-brand{display:inline-flex;min-width:0;overflow:hidden;text-overflow:ellipsis}
       .menu-toggle{display:grid;position:relative;z-index:104;flex:0 0 44px}
       .menu-toggle.open::before{transform:rotate(45deg)}.menu-toggle.open span{opacity:0}.menu-toggle.open::after{transform:rotate(-45deg)}
       .desktop-nav-cta{display:none}
-      .nav-links{position:fixed;z-index:102;top:0;right:0;bottom:0;width:min(86vw,340px);margin:0;padding:calc(max(10px,env(safe-area-inset-top)) + 82px) 18px max(24px,env(safe-area-inset-bottom));background:var(--surface);border-left:1px solid var(--line);box-shadow:-22px 0 60px rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:4px;overflow-y:auto;overscroll-behavior:contain;transform:translateX(104%);visibility:hidden;pointer-events:none;transition:transform .24s ease,visibility .24s}
+      .nav-links{position:fixed;z-index:102;top:0;right:0;bottom:0;width:min(86vw,340px);margin:0;padding:calc(max(10px,env(safe-area-inset-top)) + 82px) 18px max(24px,env(safe-area-inset-bottom));background:var(--surface);border-left:1px solid var(--line);box-shadow:-22px 0 60px rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:4px;overflow-y:auto;overscroll-behavior:contain;transform:translateX(100%);visibility:hidden;pointer-events:none;transition:transform .24s ease,visibility .24s}
       .nav-links.open{transform:none;visibility:visible;pointer-events:auto}
       .nav-links a{padding:14px 12px;min-height:50px;display:flex;align-items:center;font-size:1rem}
       .mobile-nav-cta{display:block;margin-top:12px}.mobile-nav-cta .btn{width:100%;min-height:52px;color:#07100f;background:var(--accent);justify-content:center}.mobile-nav-cta .btn:hover{background:var(--accent-2)}
@@ -260,10 +261,10 @@
 <body>
   <nav class="site-nav" aria-label="Primary navigation">
     <div class="nav-shell">
-      <a class="nav-brand" href="#top">MarketLift</a>
+      <a class="nav-brand" href="#top"><img class="brand-logo" src="assets/marketlift-logo.webp" alt="">MarketLift</a>
       <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks"><span></span></button>
       <ul class="nav-links" id="navLinks" aria-hidden="false">
-        <li><a href="#services">Services</a></li><li></li><li><a href="#process">Process</a></li><li><a href="#results">Results</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#contact">Contact</a></li>
+        <li><a href="#services">Services</a></li><li><a href="#work">Work</a></li><li><a href="#process">Process</a></li><li><a href="#results">Results</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#contact">Contact</a></li>
         <li class="mobile-nav-cta"><a class="btn btn-primary" href="#contact">Book a Call <span class="arrow">↗</span></a></li>
       </ul>
       <a class="btn btn-primary nav-cta desktop-nav-cta" href="#contact">Book a Call <span class="arrow">↗</span></a>
@@ -282,10 +283,7 @@
         </div>
         <div class="hero-orbit" aria-label="MarketLift capabilities">
           <div class="orbit-track"></div><div class="orbit-core">Marketplace<br>growth</div>
-          <span class="orbit-pill "style="
-    position: absolute;
-    left: 0;
-">Amazon</span><span class="orbit-pill">TikTok Shop</span><span class="orbit-pill">Catalog + Ads</span><span class="orbit-pill">eBay</span>
+          <span class="orbit-pill">Amazon</span><span class="orbit-pill">TikTok Shop</span><span class="orbit-pill">Catalog + Ads</span><span class="orbit-pill">eBay</span>
         </div>
         <div class="stats-strip" aria-label="Agency focus areas">
           <div class="mini-stat"><strong>3</strong><span>Core marketplaces</span></div><div class="mini-stat"><strong>360°</strong><span>Store operations</span></div><div class="mini-stat"><strong>1</strong><span>Accountable team</span></div>
@@ -331,7 +329,13 @@
 
     <section class="section experience-section" id="experience"><div class="container"><div class="section-head" data-reveal><div><span class="eyebrow">Experience & education</span><h2>Commercial context,<br>built into the work.</h2></div><p class="lead">Our experience is organized around the operating problems marketplace brands face—not a list of disconnected tools.</p></div><div class="timeline" data-reveal><article class="timeline-item"><span class="timeline-period">Marketplace operations</span><div><h3>Catalog, account health & fulfillment</h3><p>Hands-on ownership across listing quality, variation structure, inventory coordination, policy checks and the day-to-day work that keeps accounts moving.</p></div></article><article class="timeline-item"><span class="timeline-period">Growth execution</span><div><h3>Advertising, conversion & content</h3><p>Campaign structure, keyword and creative testing, storefront improvements, creator coordination and performance reviews tied to clear next actions.</p></div></article><article class="timeline-item"><span class="timeline-period">Continuous learning</span><div><h3>Amazon, TikTok Shop & eBay</h3><p>Ongoing platform education focused on policy changes, seller tools, advertising updates and marketplace-specific operating practices.</p></div></article></div></div></section>
 
-    
+    <section class="section" id="work"><div class="container"><div class="section-head" data-reveal><div><span class="eyebrow">Brand work references</span><h2>Selected brand work<br>from the full portfolio.</h2></div><p class="lead">A few commerce and brand-facing references from Zaman Haider’s existing portfolio, included to show the standard of presentation brought to marketplace brands.</p></div>
+      <div class="work-grid">
+        <a class="work-card" href="https://throttlehaus.ca" target="_blank" rel="noopener noreferrer" data-reveal><div class="work-art"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDc1MCIgcm9sZT0iaW1nIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjMTAwZjBkIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNGIyMzE3Ii8+PC9saW5lYXJHcmFkaWVudD48ZmlsdGVyIGlkPSJiIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyNCIvPjwvZmlsdGVyPjwvZGVmcz48cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3NTAiIGZpbGw9InVybCgjZykiLz48Y2lyY2xlIGN4PSI5NTAiIGN5PSIxNTAiIHI9IjIyMCIgZmlsbD0iI2U5OWEzNSIgb3BhY2l0eT0iLjE4IiBmaWx0ZXI9InVybCgjYikiLz48cGF0aCBkPSJNLTQwIDU2NkMyMTQgNDg1IDM1NSAzNzggNTcwIDM1NGMxOTktMjIgMzY1IDQ5IDY3MCAxMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTlhNjQ4IiBzdHJva2Utd2lkdGg9IjgiLz48cGF0aCBkPSJNNzQgNTYwYzgwLTk5IDE4NC0xNTYgMzMxLTE2NGgzMjljMTIwIDAgMjI0IDQxIDMwOCAxMzBsNjggNzVINTR6IiBmaWxsPSIjMjAyMzIyIiBzdHJva2U9IiNkNDgzMmYiIHN0cm9rZS13aWR0aD0iMyIvPjxjaXJjbGUgY3g9IjMzMiIgY3k9IjU5OCIgcj0iOTIiIGZpbGw9IiMwYjBlMGQiIHN0cm9rZT0iI2U5YTY0OCIgc3Ryb2tlLXdpZHRoPSI3Ii8+PGNpcmNsZSBjeD0iODgwIiBjeT0iNTk4IiByPSI5MiIgZmlsbD0iIzBiMGUwZCIgc3Ryb2tlPSIjZTlhNjQ4IiBzdHJva2Utd2lkdGg9IjciLz48cGF0aCBkPSJNMzk3IDM5Mmw5My0xMTFoMjc4bDE1NCAxNDQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2U3ZTBkMiIgc3Ryb2tlLXdpZHRoPSI1IiBvcGFjaXR5PSIuNzgiLz48cGF0aCBkPSJNNTMgMTMyaDQxME01MyAxNjVoMjUwIiBzdHJva2U9IiNmZmYiIG9wYWNpdHk9Ii4xOCIgc3Ryb2tlLXdpZHRoPSIxNCIvPjwvc3ZnPg==" alt="Abstract automotive-inspired artwork for the Throttle Haus brand reference"></div><div class="work-copy"><div class="work-meta"><span class="tag">Automotive retail brand</span><span aria-hidden="true">↗</span></div><h3>Throttle Haus</h3><p>A catalog-led retail experience with clear product discovery and a strong enthusiast identity.</p></div></a>
+        <a class="work-card" href="https://euphoria.com.mx" target="_blank" rel="noopener noreferrer" data-reveal><div class="work-art"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDc1MCIgcm9sZT0iaW1nIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZmZkOGQwIi8+PHN0b3Agb2Zmc2V0PSIuNSIgc3RvcC1jb2xvcj0iI2VhZGZmZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2QyZjBlNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9Ijc1MCIgZmlsbD0idXJsKCNnKSIvPjxjaXJjbGUgY3g9IjE4NSIgY3k9IjEyMiIgcj0iNzAiIGZpbGw9IiNmZmYiIG9wYWNpdHk9Ii43Ii8+PGNpcmNsZSBjeD0iMTA0NSIgY3k9IjU5MCIgcj0iMTgwIiBmaWxsPSIjZmY4YjlkIiBvcGFjaXR5PSIuMjIiLz48cGF0aCBkPSJNNDUzIDEzN2gyOTRsNjIgNDczSDM5MXoiIGZpbGw9IiNmZmYiIG9wYWNpdHk9Ii43NiIgc3Ryb2tlPSIjNDYyZjQ3IiBzdHJva2Utd2lkdGg9IjUiLz48cGF0aCBkPSJNNTI1IDEzN1Y3OGgxNTB2NTkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzQ2MmY0NyIgc3Ryb2tlLXdpZHRoPSI2Ii8+PHJlY3QgeD0iNDU3IiB5PSIyNjIiIHdpZHRoPSIyODYiIGhlaWdodD0iMTcxIiByeD0iODYiIGZpbGw9IiNkYTdjOGYiIG9wYWNpdHk9Ii42NCIvPjxwYXRoIGQ9Ik01MTMgNTE4aDE3NCIgc3Ryb2tlPSIjNDYyZjQ3IiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0xMTAgNjA1QzIyMCA0NDIgMzMzIDM5OCA0MzYgNDU1TTgxMiAyNjBjMTA1LTEyNiAxOTctMTYxIDMxMC0xMTkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxNiIgb3BhY2l0eT0iLjY1Ii8+PHBhdGggZD0iTTcyIDg2aDMyME03MiAxMTZoMjA1IiBzdHJva2U9IiM0NjJmNDciIG9wYWNpdHk9Ii4yOCIgc3Ryb2tlLXdpZHRoPSIxMiIvPjwvc3ZnPg==" alt="Abstract skincare-inspired artwork for the Euphoria brand reference"></div><div class="work-copy"><div class="work-meta"><span class="tag">Beauty brand</span><span aria-hidden="true">↗</span></div><h3>Euphoria</h3><p>A bright, product-led K-beauty shopping experience shaped around discovery.</p></div></a>
+        <a class="work-card" href="https://poezabride.com" target="_blank" rel="noopener noreferrer" data-reveal><div class="work-art"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDc1MCIgcm9sZT0iaW1nIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZDhkMGM0Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZjdmNGVlIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNzUwIiBmaWxsPSJ1cmwoI2cpIi8+PHBhdGggZD0iTTUyMiAwYzU2IDEyOSA4NyAyNDIgODcgMzQ4IDAgMTI1LTQ1IDI0NS0xNDIgNDAySDBWMHoiIGZpbGw9IiNiOWFmYTAiLz48cGF0aCBkPSJNNzg5IDBjLTk3IDE2Ni0xMTggMzA3LTU5IDQyNSA0NCA4NyAxMzQgMTkxIDI4MyAzMjVoMTg3VjB6IiBmaWxsPSIjZTZkZmQzIi8+PHBhdGggZD0iTTYzMCAxMTBjLTUyIDcxLTY0IDEzMi0zOCAxODRsLTExOCAzNDRoMzEyTDY2NiAyOTNjMjktNDggMTctMTA5LTM2LTE4M3oiIGZpbGw9IiNmYWY4ZjMiIHN0cm9rZT0iIzlhOGY4MCIgc3Ryb2tlLXdpZHRoPSIzIi8+PHBhdGggZD0iTTU5MSAyOTRjMjIgMTggNTMgMTggNzUgME01MjEgNDkwYzc1IDM4IDE0NyAzOCAyMTggMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjFhNTk1IiBzdHJva2Utd2lkdGg9IjMiLz48cGF0aCBkPSJNNjMgODhoMzgwTTYzIDEyMGgyMDUiIHN0cm9rZT0iIzZjNjI1NiIgb3BhY2l0eT0iLjQyIiBzdHJva2Utd2lkdGg9IjExIi8+PGNpcmNsZSBjeD0iMTA1OCIgY3k9IjExNCIgcj0iNTgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzlhOGY4MCIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+" alt="Abstract fabric-inspired artwork for the Poeza bridal brand reference"></div><div class="work-copy"><div class="work-meta"><span class="tag">Luxury fashion brand</span><span aria-hidden="true">↗</span></div><h3>Poeza Bride</h3><p>An elegant brand experience shaped around restraint, movement and bridal craft.</p></div></a>
+      </div>
+    </div></section>
 
     <section class="section results-stage" id="results">
       <div class="container">
@@ -443,7 +447,7 @@
     </div>
   </div>
 
-  <footer><div class="container"><div class="footer-grid"><div><div class="footer-name">MarketLift</div><p class="footer-tagline">Amazon · TikTok Shop · eBay Growth Agency</p></div><div class="footer-links"><a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#contact">Contact</a><a href="mailto:syedzamanhaider8@gmail.com">Email</a></div></div><div class="footer-bottom"><span>© 2026 MarketLift. All rights reserved.</span><span>Founded by Meesam Abbas · Co-founded by Zaman Haider</span></div></div></footer>
+  <footer><div class="container"><div class="footer-grid"><div class="footer-brand"><img class="brand-logo" src="assets/marketlift-logo.webp" alt=""><div><div class="footer-name">MarketLift</div><p class="footer-tagline">Amazon · TikTok Shop · eBay Growth Agency</p></div></div><div class="footer-links"><a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#contact">Contact</a><a href="mailto:syedzamanhaider8@gmail.com">Email</a></div></div><div class="footer-bottom"><span>© 2026 MarketLift. All rights reserved.</span><span>Founded by Meesam Abbas · Co-founded by Zaman Haider</span></div></div></footer>
   <button class="back-top" id="backTop" type="button" aria-label="Back to top">↑</button>
 
   <script>
