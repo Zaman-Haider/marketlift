@@ -206,8 +206,19 @@
     .lightbox-nav{top:50%;transform:translateY(-50%);border-radius:50%;font-size:1.7rem}
     .lightbox-prev{left:0}.lightbox-next{right:0}
 
-    .testimonial-shell{display:grid;grid-template-columns:280px minmax(0,1fr);gap:58px;align-items:start}.testimonial-shell h2{font-size:clamp(2rem,3.4vw,3.35rem)}.testimonial-nav{display:flex;gap:8px;margin-top:24px}.slider-btn{width:44px;height:44px;border:1px solid var(--line);background:transparent;border-radius:50%;cursor:pointer;font-size:1.2rem}.slider-btn:hover{background:var(--accent);color:#07100f;border-color:var(--accent)}
-    .slides{position:relative;min-height:300px}.testimonial{display:none}.testimonial.active{display:block;animation:fade .35s ease}@keyframes fade{from{opacity:.2}to{opacity:1}}.sample-flag{display:inline-block;color:var(--accent);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:24px}.quote{font-family:"Bricolage Grotesque";font-size:clamp(1.9rem,3.7vw,3.6rem);line-height:1.16;color:var(--text);max-width:890px;letter-spacing:-.03em}.quote-meta{margin-top:30px;font-size:.88rem;color:var(--muted)}.quote-meta strong{color:var(--text)}
+    .reviews-section{background:#070d19;color:#f7f3e8;border-block:1px solid rgba(247,243,232,.11)}
+    .reviews-section .eyebrow{color:#e4a648}.reviews-section h2{color:#fff}.reviews-section .lead{color:#aab4c4}
+    .review-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,440px);gap:42px;align-items:end;margin-bottom:48px}
+    .review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .review-card{position:relative;min-height:330px;padding:32px;background:#0c1423;border:1px solid rgba(247,243,232,.13);display:flex;flex-direction:column;overflow:hidden}
+    .review-card::before{content:"“";position:absolute;right:22px;top:10px;color:rgba(228,166,72,.13);font-family:Georgia,serif;font-size:8rem;line-height:1;pointer-events:none}
+    .review-stars{position:relative;z-index:1;display:flex;align-items:center;gap:8px;color:#e4a648;margin-bottom:30px}
+    .review-stars span:first-child{font-size:1rem;letter-spacing:.16em;line-height:1}.review-score{font-size:.7rem;font-weight:800;color:#d9deea;letter-spacing:.05em}
+    .review-quote{position:relative;z-index:1;color:#f7f3e8;font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(1.35rem,2.1vw,1.85rem);line-height:1.32;letter-spacing:-.025em;margin:0 0 34px}
+    .review-client{position:relative;z-index:1;margin-top:auto;padding-top:22px;border-top:1px solid rgba(247,243,232,.11);display:flex;align-items:center;gap:13px}
+    .review-monogram{width:44px;height:44px;display:grid;place-items:center;flex:0 0 auto;background:#e4a648;color:#07100f;font-family:"Bricolage Grotesque",sans-serif;font-size:.8rem;font-weight:800}
+    .review-person{min-width:0}.review-person strong{display:block;color:#fff;font-size:.88rem}.review-person span{display:block;color:#95a2b5;font-size:.72rem;margin-top:2px}
+    .review-country{margin-left:auto;align-self:center;color:#e4a648;font-size:.65rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
 
     .engagement-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.engagement{padding:32px;border:1px solid var(--line);background:var(--surface);display:flex;flex-direction:column;min-height:300px}.engagement.featured{background:var(--accent);color:#07100f}.engagement.featured p{color:rgba(7,16,15,.7)}.engagement-label{font-size:.69rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:48px}.engagement.featured .engagement-label{color:#07100f}.engagement h3{font-size:1.7rem;margin-bottom:12px}.engagement p{font-size:.9rem;margin-bottom:28px}.engagement .btn{margin-top:auto;align-self:flex-start}.engagement.featured .btn{border-color:rgba(7,16,15,.32)}
 
@@ -240,7 +251,7 @@
       .nav-backdrop.open{opacity:1;visibility:visible;pointer-events:auto}
     }
     @media (max-width:760px){
-      .container{width:min(100% - 28px,680px)}.section{padding:74px 0}.section-tight{padding:52px 0}.section-head{grid-template-columns:1fr;gap:18px;margin-bottom:34px}.hero{padding-top:128px;min-height:auto}.hero-inner{gap:48px}.hero h1{font-size:clamp(3rem,14.5vw,5rem)}.hero-orbit{width:min(390px,88vw)}.orbit-pill:nth-of-type(3){right:-2%}.orbit-pill:nth-of-type(5){left:-2%}.stats-strip{grid-template-columns:1fr}.mini-stat{border-right:0;border-bottom:1px solid var(--line)}.mini-stat:last-child{border-bottom:0}.platform-list{justify-content:flex-start}.about-stats{grid-template-columns:1fr}.placeholder-note{text-align:left}.leadership-grid{grid-template-columns:1fr}.service-grid{grid-template-columns:1fr}.service-card{min-height:0}.process{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--line)!important}.step:last-child{border-bottom:0!important}.step::after{display:none}.step::before{margin-bottom:24px}.founder-note{padding:26px;gap:30px}.founder-tracks{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:10px}.work-grid{grid-template-columns:1fr}.results-grid{grid-template-columns:1fr}.result-group+.result-group{margin-top:48px}.result-preview{height:auto}.result-preview::after{opacity:1;transform:none;font-size:.6rem}.result-lightbox{padding:12px}.lightbox-image{max-width:94vw;max-height:calc(86vh - 48px)}.lightbox-figure{max-width:94vw}.lightbox-close{top:2px;right:2px}.lightbox-nav{width:44px;height:44px;background:rgba(7,13,25,.82)}.lightbox-prev{left:2px}.lightbox-next{right:2px}.testimonial-shell{grid-template-columns:1fr;gap:28px}.slides{min-height:390px}.engagement-grid{grid-template-columns:1fr}.faq-wrap{grid-template-columns:1fr;gap:34px}.contact-copy,.contact-form{padding:30px 24px}.form-row{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.footer-links{justify-content:flex-start}.footer-bottom{flex-direction:column}.back-top{right:14px;bottom:14px}
+      .container{width:min(100% - 28px,680px)}.section{padding:74px 0}.section-tight{padding:52px 0}.section-head{grid-template-columns:1fr;gap:18px;margin-bottom:34px}.hero{padding-top:128px;min-height:auto}.hero-inner{gap:48px}.hero h1{font-size:clamp(3rem,14.5vw,5rem)}.hero-orbit{width:min(390px,88vw)}.orbit-pill:nth-of-type(3){right:-2%}.orbit-pill:nth-of-type(5){left:-2%}.stats-strip{grid-template-columns:1fr}.mini-stat{border-right:0;border-bottom:1px solid var(--line)}.mini-stat:last-child{border-bottom:0}.platform-list{justify-content:flex-start}.about-stats{grid-template-columns:1fr}.placeholder-note{text-align:left}.leadership-grid{grid-template-columns:1fr}.service-grid{grid-template-columns:1fr}.service-card{min-height:0}.process{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--line)!important}.step:last-child{border-bottom:0!important}.step::after{display:none}.step::before{margin-bottom:24px}.founder-note{padding:26px;gap:30px}.founder-tracks{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:10px}.work-grid{grid-template-columns:1fr}.results-grid{grid-template-columns:1fr}.result-group+.result-group{margin-top:48px}.result-preview{height:auto}.result-preview::after{opacity:1;transform:none;font-size:.6rem}.result-lightbox{padding:12px}.lightbox-image{max-width:94vw;max-height:calc(86vh - 48px)}.lightbox-figure{max-width:94vw}.lightbox-close{top:2px;right:2px}.lightbox-nav{width:44px;height:44px;background:rgba(7,13,25,.82)}.lightbox-prev{left:2px}.lightbox-next{right:2px}.review-head{grid-template-columns:1fr;gap:18px;margin-bottom:34px}.review-grid{grid-template-columns:1fr}.review-card{min-height:0;padding:26px 24px}.engagement-grid{grid-template-columns:1fr}.faq-wrap{grid-template-columns:1fr;gap:34px}.contact-copy,.contact-form{padding:30px 24px}.form-row{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.footer-links{justify-content:flex-start}.footer-bottom{flex-direction:column}.back-top{right:14px;bottom:14px}
     }
     @media (max-width:430px){.orbit-pill{font-size:.62rem;padding:7px 9px}.hero-actions .btn{width:100%}.mini-stat{padding:18px 14px}.metric{padding:32px 18px}.leader-card{grid-template-columns:1fr;padding:16px;gap:18px}.leader-portrait{width:min(100%,260px);margin-inline:auto}.leader-copy{text-align:center;padding-bottom:8px}.leader-index{margin-bottom:9px}.work-copy{padding:20px}.quote{font-size:1.75rem}.contact-email{font-size:.82rem}}
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.hero h1 span,[data-reveal]{opacity:1;transform:none}.orbit-track{display:none}}
@@ -373,11 +384,36 @@
       </div>
     </section>
 
-    <section class="section" id="reviews"><div class="container"><div class="testimonial-shell"><div data-reveal><span class="eyebrow">Client voice</span><h2>Good work earns clear feedback.</h2><div class="testimonial-nav"><button class="slider-btn" id="prevReview" aria-label="Previous review">←</button><button class="slider-btn" id="nextReview" aria-label="Next review">→</button></div></div><div class="slides" data-reveal>
-      <article class="testimonial active"><span class="sample-flag">Sample review — replace before client publication</span><p class="quote">“The strategy was clear, the communication was consistent, and every marketplace task had a reason behind it.”</p><p class="quote-meta"><strong>Marketplace brand owner</strong> · Sample attribution</p></article>
-      <article class="testimonial"><span class="sample-flag">Sample review — replace before client publication</span><p class="quote">“Our Amazon catalog and campaigns finally moved under one focused plan, with clear ownership and next steps.”</p><p class="quote-meta"><strong>Amazon seller</strong> · Sample attribution</p></article>
-      <article class="testimonial"><span class="sample-flag">Sample review — replace before client publication</span><p class="quote">“From shop audit to weekly optimization, we always knew what was happening, what came next, and why.”</p><p class="quote-meta"><strong>TikTok Shop brand</strong> · Sample attribution</p></article>
-    </div></div></div></section>
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        <div class="review-head" data-reveal>
+          <div><span class="eyebrow">Trusted by marketplace sellers</span><h2>Client Reviews</h2></div>
+          <p class="lead">Direct feedback from founders and sellers who trusted our team with marketplace growth, sourcing and day-to-day execution.</p>
+        </div>
+        <div class="review-grid">
+          <article class="review-card" data-reveal>
+            <div class="review-stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span><span class="review-score">5.0</span></div>
+            <blockquote class="review-quote">“Meesam transformed my Amazon business — sales up 200% in Q1. His product research is exceptional.”</blockquote>
+            <div class="review-client"><span class="review-monogram" aria-hidden="true">JM</span><div class="review-person"><strong>James Mitchell</strong><span>Amazon Seller</span></div><span class="review-country">USA</span></div>
+          </article>
+          <article class="review-card" data-reveal>
+            <div class="review-stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span><span class="review-score">5.0</span></div>
+            <blockquote class="review-quote">“Professional, responsive, incredibly knowledgeable. Took us from account setup to PPC — now a top seller in our category.”</blockquote>
+            <div class="review-client"><span class="review-monogram" aria-hidden="true">SC</span><div class="review-person"><strong>Sarah Chen</strong><span>Brand Owner</span></div><span class="review-country">UK</span></div>
+          </article>
+          <article class="review-card" data-reveal>
+            <div class="review-stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span><span class="review-score">5.0</span></div>
+            <blockquote class="review-quote">“A game-changer for my wholesale business. His sourcing network saved us thousands.”</blockquote>
+            <div class="review-client"><span class="review-monogram" aria-hidden="true">AA</span><div class="review-person"><strong>Ahmed Al-Rashid</strong><span>E-commerce Entrepreneur</span></div><span class="review-country">UAE</span></div>
+          </article>
+          <article class="review-card" data-reveal>
+            <div class="review-stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span><span class="review-score">5.0</span></div>
+            <blockquote class="review-quote">“Revenue tripled in 2 months after launching on TikTok Shop with his content and listing strategy.”</blockquote>
+            <div class="review-client"><span class="review-monogram" aria-hidden="true">LR</span><div class="review-person"><strong>Lisa Rodriguez</strong><span>TikTok Shop Seller</span></div><span class="review-country">Canada</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section class="section"><div class="container"><div class="section-head" data-reveal><div><span class="eyebrow">Engagement models</span><h2>Choose the structure<br>that fits the work.</h2></div><p class="lead">Start with an audit, commission a focused marketplace launch, or bring us in as an ongoing growth partner.</p></div><div class="engagement-grid">
       <article class="engagement" data-reveal><span class="engagement-label">Ongoing</span><h3>Monthly Growth Retainer</h3><p>Continuous marketplace management, campaign optimization and structured reporting.</p><a class="btn btn-secondary" href="#contact">Custom quote <span>↗</span></a></article>
@@ -435,10 +471,6 @@
 
       var tabs=document.querySelectorAll('.filter-tab');var cards=document.querySelectorAll('.work-card');
       tabs.forEach(function(tab){tab.addEventListener('click',function(){tabs.forEach(function(t){t.classList.remove('active')});tab.classList.add('active');var filter=tab.dataset.filter;cards.forEach(function(card){card.classList.toggle('hidden',filter!=='all'&&card.dataset.category.indexOf(filter)===-1)})})});
-
-      var reviews=document.querySelectorAll('.testimonial');var reviewIndex=0;
-      function showReview(index){reviews.forEach(function(item){item.classList.remove('active')});reviewIndex=(index+reviews.length)%reviews.length;reviews[reviewIndex].classList.add('active')}
-      document.getElementById('prevReview').addEventListener('click',function(){showReview(reviewIndex-1)});document.getElementById('nextReview').addEventListener('click',function(){showReview(reviewIndex+1)});
 
       document.querySelectorAll('.faq-question').forEach(function(button){button.addEventListener('click',function(){var item=button.parentElement;var answer=item.querySelector('.faq-answer');var open=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(other){other.classList.remove('open');other.querySelector('.faq-question').setAttribute('aria-expanded','false');other.querySelector('.faq-answer').style.maxHeight='0px'});if(!open){item.classList.add('open');button.setAttribute('aria-expanded','true');answer.style.maxHeight=answer.scrollHeight+'px'}})});
 
