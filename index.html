@@ -304,7 +304,7 @@
             <div class="leader-copy"><span class="leader-index">01</span><h3>Meesam Abbas</h3><p class="leader-role">Founder</p></div>
           </article>
           <article class="leader-card" data-reveal>
-            <div class="leader-portrait"><img src="assets/cofounder-zaman-haider.jpg" alt="Zaman Haider, Co-founder of MarketLift"></div>
+            <div class="leader-portrait"><img src="assets/cofounder-zaman-haider.jpg" data-headshot-b64="assets/cofounder-zaman-haider.b64" alt="Zaman Haider, Co-founder of MarketLift"></div>
             <div class="leader-copy"><span class="leader-index">02</span><h3>Zaman Haider</h3><p class="leader-role">Co-founder</p></div>
           </article>
         </div>
@@ -454,6 +454,9 @@
       document.addEventListener('keydown',function(event){if(event.key==='Escape'&&nav.classList.contains('open'))setMenu(false,true)});
       if(mobileNav.addEventListener){mobileNav.addEventListener('change',syncMenu)}else{mobileNav.addListener(syncMenu)}
       syncMenu();
+
+      var headshot=document.querySelector('[data-headshot-b64]');
+      if(headshot){fetch(headshot.getAttribute('data-headshot-b64')).then(function(response){if(!response.ok)throw new Error('Headshot asset unavailable');return response.text()}).then(function(encoded){var binary=atob(encoded.trim());var bytes=new Uint8Array(binary.length);for(var i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);headshot.src=URL.createObjectURL(new Blob([bytes],{type:'image/jpeg'}))}).catch(function(){})}
 
       var revealEls=document.querySelectorAll('[data-reveal]');
       if('IntersectionObserver' in window){var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:.12});revealEls.forEach(function(el){observer.observe(el)})}else{revealEls.forEach(function(el){el.classList.add('visible')})}
